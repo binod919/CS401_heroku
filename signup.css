@@ -1,0 +1,47 @@
+.signupform {
+	display: block;
+	text-align: center;
+	padding: 5px;
+	border-radius: 25px;
+	height: 60%;
+	width: 40%;
+  justify-content: center;
+	margin: auto;
+}
+
+p {
+	text-align: center;
+	font-size: 30px;
+  color: #1f7c93;
+}
+
+#signupButton{
+  padding: 5px;
+  margin: 5px;
+}
+
+#email_tb{
+  padding: 5px;
+  margin: 2px;
+  border-radius: 6px;
+  width: 50%;
+}
+
+#username_tb{
+	padding: 5px;
+	margin: 2px;
+	border-radius: 6px;
+  width: 50%;
+}
+
+#pass_tb{
+	padding: 5px;
+	margin: 2px;
+	border-radius: 6px;
+  width: 50%;
+}
+
+body{
+	background-image: url("photo.jpg");
+	background-size:cover;
+}
