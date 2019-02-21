@@ -1,6 +1,6 @@
 <html>
 
-<head> <lint res= "stylesheet" ref="home.css" >
+<head> <link rel= "stylesheet" href="home.css" >
 </head>
 
 <title> Home </title>
@@ -9,11 +9,30 @@
 
 <body>
 
-<div >
+<div class = "bigContainer" >
 
+<div class = "container1" >
+
+  <div> <p> Content Goes Here. </p> </div>
+
+  <div> <p> Content Goes Here. </p> </div>
+  <div> <p> Content Goes Here. </p> </div>
+
+  <div> <p> Content Goes Here. </p> </div>
+
+</div>
+
+
+<div class = "container2">
 
 
 </div>
 
+</div>
+
+
+
 </body>
+
+<div id = "footer"> <?php include_once "footer.php"; ?> </div>
 </html>
