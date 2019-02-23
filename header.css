@@ -3,6 +3,7 @@
 	background-color: #f4a142;
 	padding: 20px 10px;
 	opacity: 0.5;
+	position: fixed;
 }
 
 .header a {
