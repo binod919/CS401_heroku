@@ -35,13 +35,8 @@
 
   public function getUser ($userName) {
     $conn = $this->getConnection();
-  /*  echo "in getUser";
-    return $conn->query("select Username from user where Username = {$userName}", PDO::FETCH_ASSOC);
-    */
-
-    $conn = $this->getConnection();
-    $q = "SELECT * FROM user WHERE Username = \"{$userName}\"";
+    $q = "SELECT * FROM user WHERE username = \"{$userName}\"";
     $q = $conn->query($q, PDO::FETCH_ASSOC);
     return $q;
-}
+  }
  ?>
