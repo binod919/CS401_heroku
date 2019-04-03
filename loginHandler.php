@@ -14,7 +14,7 @@
   $uName = ""; $pass = "";
   foreach ($user as $row) {
     $uName = $row["Username"];
-    $pass = $row["PASSWORD"];
+    $pass = $row["Password"];
   }
 
 echo $uName;
