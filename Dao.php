@@ -35,8 +35,28 @@
 
   public function getUser ($userName) {
     $conn = $this->getConnection();
-    echo "in getUser";
+  /*  echo "in getUser";
     return $conn->query("select Username from user where Username = {$userName}", PDO::FETCH_ASSOC);
+    */
+
+    $conn = $this->getConnection();
+    $q = "SELECT * FROM user WHERE Username = {$userName}";
+    echo $q;
+    //$q = $conn->query($q, PDO::FETCH_ASSOC);
+    /*foreach ($q as $key) {
+      echo $key;
+    }*/
+
+    if($conn->query($q, PDO::FETCH_ASSOC)){
+      echo "yes";
+    } else {
+      echo "npt succes";
+      die(var_export($conn->errorinfo(), TRUE));
+    }
+    while($row = $q->fetch()){
+      echo $row['firstname'];
+    }
+
   }
 
 }
