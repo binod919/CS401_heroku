@@ -10,18 +10,14 @@
   require 'Dao.php';
   $dao = new Dao();
   $user = $dao->getUser($loginUsername);
-  echo $user['username'];
+
+  $uName = ""; $pass = "";
   foreach ($user as $row) {
-    echo "inhere";
-    echo htmlspecialchars($row['username']);
+    $uName = $row["Username"];
+    $pass = $row["PASSWORD"];
   }
 
-  //if($user->num_rows > 0){
-    //echo "inuser";
-/*  while ($row = $user->FETCH_ASSOC()){
-    echo "username entered:" . $row['Username'];
-    echo "new line";
-  }*/
-//} else {echo "error";}
+echo $uName;
+echo $pass;
 
  ?>
