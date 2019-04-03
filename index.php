@@ -8,7 +8,7 @@
 
 <body>
 <div class="loginForm">
-	<form method="post">
+	<form method="post" action = "loginHandler.php">
 		<p> Login to Share My writings </p>
 		<div> <input type="text" id="username_tb" name="username" placeholder="Username or Email"></div>
 		<div> <input type="password" id="pass_tb" name="password" placeholder="Password"> </div>
