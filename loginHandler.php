@@ -5,13 +5,11 @@
   $loginUsername = $_POST['username'];
   $loginPassword = $_POST['password'];
 
-  echo $loginUsername ;
-
-  require 'Dao.php';
+  require_once 'Dao.php';
 
   $dao = new Dao();
   $user = $dao->getUser($loginUsername);
-  
+
   $uName = ""; $pass = "";
 
   foreach ($user as $row) {
@@ -19,9 +17,12 @@
     $pass = $row["Password"];
   }
 
-  if($loginPassword !== $pass || $userName !== $uName ){
+  if($loginPassword !== $pass) && $userName !== $uName ){
     $_session['message'] = "User name or password is incorrect.";
     header("Location: index.php");
+    exit;
+  } else {
+    header("Location: signup.php");
     exit;
   }
  ?>

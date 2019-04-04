@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-
 $username = $_POST['username'];
 $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
@@ -16,11 +15,6 @@ if ($password !== $rePassword){
 
 require_once 'Dao.php';
 $dao = new Dao();
-
 $dao->createUser($username, $firstname, $lastname, $email, $password);
-echo"last";
-
-//header("Location: index.php");
-
-exit;
+header("Location: index.html");
 ?>
