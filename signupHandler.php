@@ -29,7 +29,7 @@ echo " in here";
 require_once 'Dao.php';
 echo " in here too";
 $dao = new Dao();
-echo " inhere3"
+echo " inhere3";
 $dao->createUser($username, $firstname, $lastname, $email, $password);
 echo "success";
 header("Location: index.php");
