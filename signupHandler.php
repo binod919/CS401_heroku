@@ -9,12 +9,27 @@ $password = $_POST['password'];
 $rePassword = $_POST['rePassword'];
 
 if ($password !== $rePassword){
-  echo "password do not match";
+  $_SESSION['message'] = "Password do not match.";
+  header("Location: signup.php");
+  exit;
+}
+
+require_once 'validation.php';
+$val = new validation();
+$isPassValid = $val->validatePassword($password);
+
+if($isPassValid == 0){
+  $_SESSION['message'] = "Password must be of at least 8 characters and Atleast one upper and one lower case letter\n";
+  header("Location: signup.php");
   exit;
 }
 
 require_once 'Dao.php';
 $dao = new Dao();
+
 $dao->createUser($username, $firstname, $lastname, $email, $password);
-header("Location: index.html");
+header("Location: index.php");
+
+exit;
+
 ?>
