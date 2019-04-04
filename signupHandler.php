@@ -17,7 +17,7 @@ if ($password !== $rePassword){
 require_once 'validation.php';
 $val = new validation();
 $isPassValid = $val->validatePassword($password);
-
+echo $isPassValid;
 if($isPassValid == 0){
   $_SESSION['message'] = "Password must be of at least 8 characters and Atleast one upper and one lower case letter\n";
   header("Location: signup.php");
@@ -29,7 +29,6 @@ $dao = new Dao();
 
 $dao->createUser($username, $firstname, $lastname, $email, $password);
 header("Location: index.php");
-
 exit;
 
 ?>
