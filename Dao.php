@@ -30,12 +30,13 @@
     $q->bindParam(":email", $email);
     $q->bindParam(":password", $password);
     $q->execute();
+    echo "executed";
   }
 
 
   public function getUser ($userName) {
     $conn = $this->getConnection();
-    $q = "SELECT * FROM user WHERE username = \"{$userName}\"";
+    $q = "SELECT * FROM user WHERE Username = \"{$userName}\"";
     $q = $conn->query($q, PDO::FETCH_ASSOC);
     return $q;
   }
