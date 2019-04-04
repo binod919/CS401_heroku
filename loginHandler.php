@@ -8,16 +8,20 @@
   echo $loginUsername ;
 
   require 'Dao.php';
+
   $dao = new Dao();
   $user = $dao->getUser($loginUsername);
-
+  
   $uName = ""; $pass = "";
+
   foreach ($user as $row) {
     $uName = $row["Username"];
     $pass = $row["Password"];
   }
 
-echo $uName;
-echo $pass;
-
+  if($loginPassword !== $pass || $userName !== $uName ){
+    $_session['message'] = "User name or password is incorrect.";
+    header("Location: index.php");
+    exit;
+  }
  ?>
