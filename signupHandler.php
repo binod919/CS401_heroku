@@ -26,8 +26,8 @@ if($isPassValid == 0){
 
 require_once 'Dao.php';
 $dao = new Dao();
-
 $dao->createUser($username, $firstname, $lastname, $email, $password);
+echo "success";
 header("Location: index.php");
 exit;
 
