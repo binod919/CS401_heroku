@@ -23,7 +23,7 @@
 
   public function createUser ($userName,$firstName, $lastName, $email, $password){
     $conn = $this->getConnection();
-    $saveQuery = "INSERT INTO user(Username, Firstname, Lastname, Email, Password) VALUESS (:username, :firstname, :lastname, :email, :password)";
+    $saveQuery = "INSERT INTO user(Username, Firstname, Lastname, Email, Password) VALUES (:username, :firstname, :lastname, :email, :password)";
     $q = $conn->prepare($saveQuery);
     $q->bindParam(":username", $userName);
     $q->bindParam(":firstname", $firstName);
