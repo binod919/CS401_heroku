@@ -30,7 +30,7 @@ echo " in here";
 
 try { require_once '../Dao.php';
 } catch (ErrorException $ex){
-  echo $ex;
+  echo "unable to require";
 }
 echo " in here too";
 $dao = new Dao();
