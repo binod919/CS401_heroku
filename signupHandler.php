@@ -27,7 +27,11 @@ if($isPassValid == 0){
 echo $username;
 echo $password;
 echo " in here";
-require_once '../Dao.php';
+
+try { require_once '../Dao.php';
+} catch (ErrorException $ex){
+  echo $ex;
+}
 echo " in here too";
 $dao = new Dao();
 //echo " inhere3";
