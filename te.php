@@ -1,13 +1,6 @@
 <?php echo "works";
 
-  class te {
+  require_once 'Dao.php';
 
-    public function tef(){
-      echo "fi";
-    }
-  }
-
-  $to = new te();
-  $to-> tef();
-
+  echo "success";
 ?>
