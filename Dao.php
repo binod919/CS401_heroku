@@ -35,7 +35,6 @@
     echo "echothis";
   }
 
-
   public function getUser ($userName) {
     $conn = $this->getConnection();
     $q = "SELECT * FROM user WHERE Username = \"{$userName}\"";
