@@ -32,6 +32,7 @@
     $q->bindParam(":password", $password);
     $q->execute();
     echo "executed";
+    echo "echothis";
   }
 
 
