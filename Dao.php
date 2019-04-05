@@ -6,8 +6,7 @@
 	  private $db = "heroku_e77f4cf194c9188";
 	  private $user = "b3fa24cf81af32";
 	  private $pass = "28a3e86e";
-
-
+    
   public function getConnection () {
   // $this->logger->LogDebug("Getting a connection.");
    try {
