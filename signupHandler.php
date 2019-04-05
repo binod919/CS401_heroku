@@ -27,7 +27,7 @@ if($isPassValid == 0){
 echo $username;
 echo $password;
 echo " in here";
-require_once $_SERVER['DOCUMENT_ROOT'] . 'Dao.php';
+require_once '../Dao.php';
 echo " in here too";
 $dao = new Dao();
 //echo " inhere3";
