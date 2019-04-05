@@ -28,7 +28,7 @@ echo $username;
 echo $password;
 echo " in here";
 
-try { require_once '../Dao.php';
+try { include_once 'Dao.php';
 } catch (ErrorException $ex){
   echo "unable to require";
 }
