@@ -1,4 +1,5 @@
 <?php
+echo "in dao ";
   class Dao {
 
 	  private $host = "us-cdbr-iron-east-03.cleardb.net";
