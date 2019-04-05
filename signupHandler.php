@@ -24,7 +24,8 @@ if($isPassValid == 0){
   header("Location: signup.php");
   exit;
 }*/
-
+echo $username;
+echo $password;
 echo " in here";
 require_once $_SERVER['DOCUMENT_ROOT'] . 'Dao.php';
 echo " in here too";
