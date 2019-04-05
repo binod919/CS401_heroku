@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+require_once 'Dao.php';
+
 $username = $_POST['username'];
 $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
@@ -28,7 +30,7 @@ echo $username;
 echo $password;
 echo " in here";
 
-include_once '/app/Dao.php';
+//require_once '/app/Dao.php';
 echo " in here too";
 $dao = new Dao();
 //echo " inhere3";
