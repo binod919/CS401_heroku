@@ -28,10 +28,7 @@ echo $username;
 echo $password;
 echo " in here";
 
-try { include_once 'Dao.php';
-} catch (ErrorException $ex){
-  echo "unable to require";
-}
+include_once '/app/Dao.php';
 echo " in here too";
 $dao = new Dao();
 //echo " inhere3";
