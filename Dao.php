@@ -1,5 +1,5 @@
 <?php
-echo "in dao ";
+
   class Dao {
 
 	  private $host = "us-cdbr-iron-east-03.cleardb.net";
@@ -32,8 +32,6 @@ echo "in dao ";
     $q->bindParam(":email", $email);
     $q->bindParam(":password", $password);
     $q->execute();
-    echo "executed";
-    echo "echothis";
   }
 
   public function getUser ($userName) {
