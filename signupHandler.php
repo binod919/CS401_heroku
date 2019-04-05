@@ -26,7 +26,7 @@ if($isPassValid == 0){
 }*/
 
 echo " in here";
-require 'Dao.php';
+require_once('Dao.php');
 echo " in here too";
 $dao = new Dao();
 //echo " inhere3";
