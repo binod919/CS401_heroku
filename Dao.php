@@ -10,7 +10,7 @@
   public function getConnection () {
   // $this->logger->LogDebug("Getting a connection.");
    try {
-     echo " making conn";
+     //echo " making conn";
      $conn = new PDO("mysql:host={$this->host};dbname={$this->db}", $this->user,
            $this->pass);
    } catch (Exception $e) {

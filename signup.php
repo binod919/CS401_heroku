@@ -19,7 +19,12 @@
         <div> <input type ="password" id = "pass_tb" name = "rePassword" placeholder="Retype Password"> </div>
     		<div> <input type="submit" id="signupButton" value="Sign Up"> </div>
     	</form>
-
+      <?php if (isset($_SESSION['message'])) {
+        //echo " is set";
+        echo "<div>" .$_SESSION['message'] ."</div>";
+      }
+      unset($_SESSION['message']);
+      ?>
     </div>
 
     <div id = "footer" > <?php include_once "footer.php" ; ?>

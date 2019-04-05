@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
 
 <head>
@@ -14,7 +15,13 @@
 		<div> <input type="password" id="pass_tb" name="password" placeholder="Password"> </div>
 		<div> <input type="submit" id= "loginButton" value="Login"> </div>
 	</form>
+	<?php
 
+	if (isset($_SESSION['message'])) {
+	    echo "<div>" .$_SESSION['message'] ."</div>";
+	}
+	unset($_SESSION['message']);
+	?>
 </div>
 
 <div id= "footer" >  <?php include_once "footer.php"; ?>
