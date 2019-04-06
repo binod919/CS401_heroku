@@ -22,9 +22,10 @@
 	}
 	unset($_SESSION['message']);
 	?>
-</div>
-
-<div id= "footer" >  <?php include_once "footer.php"; ?>
+	<a href = "signup.php"> Don't have an account? </a>
 </div>
 </body>
+<footer>
+<div id= "footer" >  <?php include_once "footer.php"; ?> </div>
+</footer>
 </html>

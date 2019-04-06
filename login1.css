@@ -16,6 +16,16 @@ p {
 	color: #1f7c93;
 }
 
+a:link {
+	color: red;
+	margin: 3px 3px;
+}
+
+a:visited {
+	color: blue;
+	margin: 3px 3px;
+}
+
 #username_tb{
 	padding: 5px;
 	margin: 5px;

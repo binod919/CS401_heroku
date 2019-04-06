@@ -17,10 +17,24 @@ if ($password !== $rePassword){
 require_once 'validation.php';
 $val = new validation();
 $isPassValid = $val->validatePassword($password);
+$isEmailValid = $val->validateEmail($email);
+$isFirstnameValid = $val->validateNames($firstname);
+$isLastnameValid = $val->validateNames($lastname);
+
+if($isFirstnameValid == 0 || $isLastnameValid == 0){
+  $_SESSION['message'] = "Invalid name. Check your first and last name";
+  header("Location: signup.php");
+}
 
 if($isPassValid == 0){
   echo "in if";
   $_SESSION['message'] = "Password must be of at least 8 characters and Atleast one upper and one lower case letter\n";
+  header("Location: signup.php");
+  exit;
+}
+
+if($isEmailValid == 0){
+  $_SESSION['message'] = "Invalid email";
   header("Location: signup.php");
   exit;
 }

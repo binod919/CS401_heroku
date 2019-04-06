@@ -2,10 +2,9 @@
   <html>
   <head>
    <link rel="stylesheet" href="signup.css" >
+     <?php include_once "header.php"; ?>
   </head>
   <title>Sign UP</title>
-
-  <?php include_once "header.php"; ?>
 
     <body>
     <div class="signupform">
@@ -18,17 +17,15 @@
     		<div> <input type="password" id="pass_tb" name="password" placeholder="Password"> </div>
         <div> <input type ="password" id = "pass_tb" name = "rePassword" placeholder="Retype Password"> </div>
     		<div> <input type="submit" id="signupButton" value="Sign Up"> </div>
-    	</form>
+
       <?php if (isset($_SESSION['message'])) {
-        //echo " is set";
         echo "<div>" .$_SESSION['message'] ."</div>";
       }
       unset($_SESSION['message']);
       ?>
+      </form>
     </div>
-
-    <div id = "footer" > <?php include_once "footer.php" ; ?>
     </div>
     </body>
-
+    <div id = "footer" > <?php include_once "footer.php" ; ?> </div>
   </html>

@@ -5,24 +5,40 @@
   $loginUsername = $_POST['username'];
   $loginPassword = $_POST['password'];
 
-  require_once 'Dao.php';
+  if(strlen($loginUsername) === 0 || (strlen($loginPassword)) === 0){
+    $_SESSION['message'] = "Enter your Username and Password";
+    header("Location: index.php");
+    exit;
+  }
 
+  require_once 'Dao.php';
   $dao = new Dao();
   $user = $dao->getUser($loginUsername);
 
-  $uName = ""; $pass = "";
+  $row_count = $user->rowCount();
+
+ if ($row_count <  1){
+    $_SESSION['message'] = "Invalid Username and Password.";
+    header("Location: index.php");
+    exit;
+  }
+
+  $uName = "";
+  $pass = "";
 
   foreach ($user as $row) {
     $uName = $row["Username"];
     $pass = $row["Password"];
   }
 
-  if($loginPassword !== $pass) && $userName !== $uName ){
-    $_session['message'] = "User name or password is incorrect.";
-    header("Location: index.php");
+  if($loginUsername == $uName && $loginPassword === $pass ){
+
+    header("Location: home.php");
     exit;
+
   } else {
-    header("Location: signup.php");
+    $_SESSION['message'] = "Invalid Username and Password";
+    header("Location: index.php");
     exit;
   }
  ?>
