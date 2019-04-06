@@ -10,5 +10,23 @@
               return 0;
             }
           }
+
+          public function validateEmail($email)
+          {
+              if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                  return 0;
+              } else {
+                  return 1;
+              }
+          }
+
+          public function validateNames($names)
+          {
+              if (!preg_match("/^[a-zA-Z ]*$/", $names)) {
+                  return 0;
+              } else {
+                return 1;
+              }
+          }
       }
 ?>
