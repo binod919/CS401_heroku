@@ -1,4 +1,8 @@
-<?php session_start() ?>
+<?php
+session_start();
+$_SESSION['thispage'] = "signup";
+ ?>
+ 
   <html>
   <head>
    <link rel="stylesheet" href="signup.css" >

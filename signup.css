@@ -9,6 +9,12 @@
 	margin: auto;
 }
 
+#error {
+	color: white;
+	background-color: Red;
+	margin: 3px 3px;
+}
+
 p {
 	text-align: center;
 	font-size: 30px;

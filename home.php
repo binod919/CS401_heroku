@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+$_SESSION['thispage'] = "home";
+
+if($_SESSION['loggedin'] != TRUE){
+$_SESSION['message'] = "You must login First.";
+header("Location: index.php");
+exit;
+}
+?>
+
 <html>
 
 <head> <link rel= "stylesheet" href="home.css" >

@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php
+
+session_start();
+$_SESSION['thispage'] = "login";
+
+?>
 <html>
 
 <head>

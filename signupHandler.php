@@ -24,10 +24,10 @@ $isLastnameValid = $val->validateNames($lastname);
 if($isFirstnameValid == 0 || $isLastnameValid == 0){
   $_SESSION['message'] = "Invalid name. Check your first and last name";
   header("Location: signup.php");
+  exit;
 }
 
 if($isPassValid == 0){
-  echo "in if";
   $_SESSION['message'] = "Password must be of at least 8 characters and Atleast one upper and one lower case letter\n";
   header("Location: signup.php");
   exit;

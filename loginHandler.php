@@ -32,7 +32,7 @@
   }
 
   if($loginUsername == $uName && $loginPassword === $pass ){
-
+    $_SESSION['loggedin'] = TRUE;
     header("Location: home.php");
     exit;
 
