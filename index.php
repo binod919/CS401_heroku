@@ -23,7 +23,7 @@ $_SESSION['thispage'] = "login";
 	<?php
 
 	if (isset($_SESSION['message'])) {
-	    echo "<div>" .$_SESSION['message'] ."</div>";
+	    echo "<div id =\"errors\">" .$_SESSION['message'] ."</div>";
 	}
 	unset($_SESSION['message']);
 	?>

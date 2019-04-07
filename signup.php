@@ -2,7 +2,7 @@
 session_start();
 $_SESSION['thispage'] = "signup";
  ?>
- 
+
   <html>
   <head>
    <link rel="stylesheet" href="signup.css" >
@@ -23,7 +23,7 @@ $_SESSION['thispage'] = "signup";
     		<div> <input type="submit" id="signupButton" value="Sign Up"> </div>
 
       <?php if (isset($_SESSION['message'])) {
-        echo "<div>" .$_SESSION['message'] ."</div>";
+        echo "<div id = \"error\">" .$_SESSION['message'] ."</div>";
       }
       unset($_SESSION['message']);
       ?>
