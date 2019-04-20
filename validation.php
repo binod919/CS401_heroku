@@ -6,7 +6,7 @@
 
           public function validatePassword($password)
           {
-            if(isset($password)){
+            if(!isset($password)){
               return 0;
             }
               if (preg_match("/^((?=.*[a-z])(?=.*[A-Z])(?=.*\d))[a-zA-Z\d]{8,}$/", $password)) {
@@ -19,7 +19,7 @@
           public function validateEmail($email)
           {
 
-            if(isset($email)){
+            if(!isset($email)){
               return 0;
             }
 
@@ -32,7 +32,7 @@
 
           public function validateNames($names)
           {
-            if(isset($names)){
+            if(!isset($names)){
               return 0;
             }
               if (!preg_match("/^[a-zA-Z ]*$/", $names)) {
