@@ -33,6 +33,7 @@
 
   if($loginUsername == $uName && $loginPassword === $pass ){
     $_SESSION['loggedin'] = TRUE;
+    $_SESSION['user'] = $loginUsername;
     header("Location: home.php");
     exit;
 

@@ -3,5 +3,9 @@
 	font-size: 20px;
 	color: #800000;
 	float: none;
+	height: auto;
 	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }

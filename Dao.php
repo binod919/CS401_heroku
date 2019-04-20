@@ -33,9 +33,25 @@
     $q->execute();
   }
 
+  public function createPost($post, $user){
+    $conn = $this-> getConnection();
+    $postQuery = "INSERT INTO posts(post, username) VALUES (:post, :username)";
+    $q = $conn-> prepare($postQuery);
+    $q->bindParam(":post", $post);
+    $q->bindParam(":username", $user);
+    $q->execute();
+  }
+
   public function getUser ($userName) {
     $conn = $this->getConnection();
     $q = "SELECT * FROM user WHERE Username = \"{$userName}\"";
+    $q = $conn->query($q, PDO::FETCH_ASSOC);
+    return $q;
+  }
+
+  public function getPosts () {
+    $conn = $this->getConnection();
+    $q = "SELECT post FROM posts";
     $q = $conn->query($q, PDO::FETCH_ASSOC);
     return $q;
   }

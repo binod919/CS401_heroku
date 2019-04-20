@@ -5,7 +5,6 @@ $_SESSION['thispage'] = "login";
 
 ?>
 <html>
-
 <head>
 	<link rel="stylesheet" href="login1.css">
 </head>
@@ -20,18 +19,19 @@ $_SESSION['thispage'] = "login";
 		<div> <input type="password" id="pass_tb" name="password" placeholder="Password"> </div>
 		<div> <input type="submit" id= "loginButton" value="Login"> </div>
 	</form>
-	<?php
+<?php
+if (isset($_SESSION['message'])) {
+    echo "<div id =\"errors\">" .$_SESSION['message'] ."</div>";
+}
+unset($_SESSION['message']);
+?>
+		<a href = "signup.php"> Don't have an account? </a>
+</div>
 
-	if (isset($_SESSION['message'])) {
-	    echo "<div id =\"errors\">" .$_SESSION['message'] ."</div>";
-	}
-	unset($_SESSION['message']);
-	?>
-	<a href = "signup.php"> Don't have an account? </a>
 </div>
 </body>
 <footer>
-<div id= "footer" >  <?php include_once "footer.php"; ?> </div>
-<?php session_destroy(); ?>
+<div id= "footer" >  <?php include_once "footer.php"; ?>
 </footer>
+<?php session_destroy(); ?>
 </html>
