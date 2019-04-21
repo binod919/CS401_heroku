@@ -31,6 +31,8 @@
     $pass = $row["Password"];
   }
 
+  $loginPassword = hash("sha256", $loginPassword);
+
   if($loginUsername == $uName && $loginPassword === $pass ){
     $_SESSION['loggedin'] = TRUE;
     $_SESSION['user'] = $loginUsername;

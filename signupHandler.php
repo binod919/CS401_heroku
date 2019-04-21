@@ -39,6 +39,8 @@ if($isEmailValid == 0){
   exit;
 }
 
+$password = hash("sha256", $password);
+
 require_once 'Dao.php';
 $dao = new Dao();
 $dao->createUser($username, $firstname, $lastname, $email, $password);
