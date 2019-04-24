@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['thispage'] = "signup";
+$_SESSION['thisPage'] = "signup";
  ?>
 
   <html>

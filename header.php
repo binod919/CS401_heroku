@@ -9,14 +9,30 @@
 	<link rel="stylesheet" href="header.css">
 </head>
 <div class="header">
-	<img src="Logo.png" alt = "Logo" class="logo">
-	<div class="header-right">
-		<a class="active" href="home.php"> Home </a>
+	<?php
+	if(isset($_SESSION['thisPage']) && $_SESSION['thisPage']=== "home"){
+		echo '<a class="thisRef" href="home.php"> Home </a>
 		<a href="signup.php"> Sign Up </a>
-    <a href="index.php">Login </a>
-		<a href="index.php"> Logout </a>
-		<input id="searchBox" type="text" placeholder="Search" name="search"> </input>
-		<button id="searchButton" type="submit" name="Search"> <i class="searchBox"> </i> </button>
+		<a href="index.php">Login </a>
+		<a href="index.php"> Logout </a>';
+	}else if(isset($_SESSION['thisPage']) && $_SESSION['thisPage']=== "signup"){
+		echo '<a class="active" href="home.php"> Home </a>
+		<a class = "thisRef" href="signup.php"> Sign Up </a>
+		<a href="index.php">Login </a>
+		<a href="index.php"> Logout </a> ';
+	} else if(isset($_SESSION['thisPage']) && $_SESSION['thisPage']=== "login"){
+		echo '<a class="active" href="home.php"> Home </a>
+		<a href="signup.php"> Sign Up </a>
+		<a class = "thisRef" href="index.php">Login </a>
+		<a href="index.php"> Logout </a> ';
+	}else {
+
+	echo '<a class="active" href="home.php"> Home </a>
+	<a href="signup.php"> Sign Up </a>
+	<a href="index.php">Login </a>
+	<a href="index.php"> Logout </a>';
+	}
+	?>
 	</div>
 </div>
 </html>

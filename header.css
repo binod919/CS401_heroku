@@ -5,6 +5,10 @@
 	opacity: 0.5;
 }
 
+a.thisRef {
+	background: grey;
+}
+
 .header a {
   float: left;
   color: black;

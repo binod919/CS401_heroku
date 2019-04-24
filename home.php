@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$_SESSION['thispage'] = "home";
+$_SESSION['thisPage'] = "home";
 
 if($_SESSION['loggedin'] != TRUE){
 $_SESSION['message'] = "You must login First.";
