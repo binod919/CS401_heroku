@@ -64,4 +64,5 @@ p {
 body{
 	background-image: url("photo.jpg");
 	background-size:cover;
+	overflow: hidden;
 }
