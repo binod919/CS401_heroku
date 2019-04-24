@@ -54,4 +54,5 @@ a:visited {
 body{
 	background-image: url("photo.jpg");
 	background-size:cover;
+	overflow-y: hidden;
 }
