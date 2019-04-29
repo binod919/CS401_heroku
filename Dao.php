@@ -51,7 +51,7 @@
 
   public function getPosts () {
     $conn = $this->getConnection();
-    $q = "SELECT post FROM posts";
+    $q = "SELECT post FROM posts oreder by datecreated DESC";
     $q = $conn->query($q, PDO::FETCH_ASSOC);
     return $q;
   }
