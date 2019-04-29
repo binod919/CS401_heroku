@@ -59,18 +59,18 @@
   public function getThisComment($postID){
   //  $_SESSION['meg'] = gettype($postID);
     $conn = $this->getConnection();
-    $q = "SELECT * from comments where CommentID = {$postID}";
+    $q = "SELECT * from comments where commentID = {$postID}";
     $q = $conn->query($q, PDO::FETCH_ASSOC);
     return $q;
   }
 
   public function saveComment($postId, $comment, $username){
     $conn = $this-> getConnection();
-    $commentQuery = "INSERT INTO comments(CommentID, Comment, Username) VALUES (:CommentID,:Comment, :Username)";
+    $commentQuery = "INSERT INTO comments(commentID, comment, username) VALUES (:commentID,:comment, :username)";
     $q = $conn-> prepare($commentQuery);
-    $q->bindParam(":CommentID", $postId);
-    $q->bindParam(":Comment", $comment);
-    $q->bindParam(":Username", $username);
+    $q->bindParam(":commentID", $postId);
+    $q->bindParam(":comment", $comment);
+    $q->bindParam(":username", $username);
     $q->execute();
   }
 
