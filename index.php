@@ -30,7 +30,6 @@ unset($_SESSION['message']);
 
 </div>
 </body>
-<hr>
 <footer>
 <div id= "footer" >  <?php include_once "footer.php"; ?>
 </footer>
