@@ -2,7 +2,8 @@
 	overflow: hidden;
 	background-color: #f4a142;
 	padding: 20px 10px;
-	opacity: 0.5;
+	opacity: 0.9;
+	height: 70px;
 }
 
 a.thisRef {
