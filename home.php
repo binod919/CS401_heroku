@@ -16,6 +16,7 @@ exit;
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
     </script>
     <script src="js/post.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 
 <title> Home </title>
@@ -31,11 +32,46 @@ exit;
 require_once "Dao.php";
 $dao = new Dao();
 $posts = $dao->getPosts();
-
+$var = array();
+$i = 0;
 foreach ($posts as $post ) {
-  echo "<div>" .htmlentities($post['post']) . "</div>";
-}
+  $bname = "button". $i;
+  $var[$bname] = $post['postID'];
+  $i = $i + 1;
+  echo "<div class = miniContainer>";
+    echo "<div class = postContainer>";
+    echo "<h3>" .$post['username'] . "</h3>";
+        echo "<div class= post>" .htmlentities($post['post']) . "</div>";
 
+    echo "</div>";
+
+    echo "<div class = commentContainer>";
+
+    $comments = $dao-> getThisComment((int)$post['postID']);
+
+    foreach($comments as $comment){
+      echo "<h3>" . $comment['Username'] ."</h3>";
+      echo "<div class = commentDiv>" .htmlentities($comment['Comment']) . "</div>";
+    }
+
+
+    echo "</div>";
+
+    echo"<form class = commentForm method= post action= commentHandler.php>";
+
+    echo "<input class= commentTb type = text name = commentBox placeholder = Comment>";
+    echo "<input class = commentBt type = submit name = $bname value = Submit>";
+
+    echo"</form>";
+
+  echo "</div>";
+
+
+
+
+
+}
+$_SESSION['idvar'] = $var;
  ?>
 
 </div>

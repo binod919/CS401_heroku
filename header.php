@@ -12,7 +12,7 @@
     <script src="js/logout.js"></script>
 </head>
 <div class="header">
-	<img src="Logo.png" alt = "Logo" class="logo">
+	<img src="logo.png" alt = "Logo" class="logo">
 	<div class="header-right">
 
 		<?php
