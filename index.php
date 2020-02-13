@@ -9,7 +9,7 @@ $_SESSION['thisPage'] = "login";
 	<link rel="stylesheet" href="/CSS/login1.css">
 </head>
 
-<?php include_once "./PHP_Pages/header.php"; ?>
+<?php include_once "/PHP_Pages/header.php"; ?>
 
 <body>
 <div class="loginForm">
@@ -25,7 +25,7 @@ if (isset($_SESSION['message'])) {
 }
 unset($_SESSION['message']);
 ?>
-		<a href = "signup.php"> Don't have an account? </a>
+		<a href = "/handlers/signup.php"> Don't have an account? </a>
 </div>
 
 </div>
