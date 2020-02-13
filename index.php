@@ -9,7 +9,7 @@ $_SESSION['thisPage'] = "login";
 	<link rel="stylesheet" href="/CSS/login1.css">
 </head>
 
-<?php include_once "/PHP_Pages/header.php"; ?>
+<?php include_once "./PHP_Pages/header.php"; ?>
 
 <body>
 <div class="loginForm">
