@@ -6,10 +6,10 @@ $_SESSION['thisPage'] = "login";
 ?>
 <html>
 <head>
-	<link rel="stylesheet" href="login1.css">
+	<link rel="stylesheet" href="/CSS/login1.css">
 </head>
 
-<?php include_once "header.php"; ?>
+<?php include_once "/PHP_Pages/header.php"; ?>
 
 <body>
 <div class="loginForm">
